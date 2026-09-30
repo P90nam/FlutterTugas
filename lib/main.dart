@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'login_page.dart';
-import 'calculator_page.dart';
 import 'package:get/get.dart';
+
+import 'routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,15 +10,12 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-   return GetMaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: CalculatorPage(),
+    return GetMaterialApp(
+      title: 'Belajar Flutter PPLG 3',
+      initialRoute: Routes.registration,
+      getPages: Routes.myPages,
     );
   }
 }

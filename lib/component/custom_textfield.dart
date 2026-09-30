@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
 
 class MyTextfield extends StatelessWidget {
   final String myHint;
@@ -21,8 +19,9 @@ class MyTextfield extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      keyboardType: TextInputType.numberWithOptions(decimal: true),
-      inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^[0-9]*\.?[0-9]*$'))],
+      keyboardType: isPassword
+          ? TextInputType.visiblePassword
+          : TextInputType.text,
       controller: txtController,
       obscureText: isPassword,
       decoration: InputDecoration(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'component/custom_button.dart';
-import 'component/custom_textfield.dart';
+import '../component/custom_button.dart';
+import '../component/custom_textfield.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
