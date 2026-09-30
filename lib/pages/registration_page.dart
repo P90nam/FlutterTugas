@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../component/custom_button.dart';
 import '../component/custom_textfield.dart';
 import '../controller/registration_controller.dart';
+import '../component/YoutubeMark.dart';
 
 class RegistrationPage extends StatelessWidget {
   const RegistrationPage({super.key});
@@ -30,10 +31,10 @@ class RegistrationPage extends StatelessWidget {
               const SizedBox(height: 16),
               Row(
                 children: const [
-                  _YouTubeMark(),
+                  YouTubeMark(),
                   SizedBox(width: 10),
                   Text(
-                    'YouTube',
+                    'YouTube Style Register',
                     style: TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -64,18 +65,4 @@ class RegistrationPage extends StatelessWidget {
   }
 }
 
-class _YouTubeMark extends StatelessWidget {
-  const _YouTubeMark();
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(8),
-      decoration: BoxDecoration(
-        color: Colors.red,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: const Icon(Icons.play_arrow, color: Colors.white, size: 28),
-    );
-  }
-}

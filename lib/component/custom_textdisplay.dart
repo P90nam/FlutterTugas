@@ -11,29 +11,27 @@ class CustomTextdisplay extends StatelessWidget {
   const CustomTextdisplay({
     super.key,
     required this.text,
-    this.fontSize = 14.0, 
-    this.fontWeight = FontWeight.w500, 
-    this.color = Colors.black, 
-    this.maxLines = 2, 
-    this.overflow = TextOverflow.ellipsis, 
+    this.fontSize = 14.0,
+    this.fontWeight = FontWeight.w500,
+    this.color = Colors.black,
+    this.maxLines = 2,
+    this.overflow = TextOverflow.ellipsis,
   });
 
-  // Helper untuk Judul Video (Lebih tebal dan besar)
   factory CustomTextdisplay.title(String text) {
     return CustomTextdisplay(
       text: text,
       fontSize: 16.0,
-      fontWeight: FontWeight.w600, // Semi-bold
+      fontWeight: FontWeight.w600,
       maxLines: 2,
     );
   }
 
-  // Helper untuk Nama Channel / Views (Lebih kecil dan abu-abu)
   factory CustomTextdisplay.subtitle(String text) {
     return CustomTextdisplay(
       text: text,
       fontSize: 12.0,
-      fontWeight: FontWeight.w400, // Regular
+      fontWeight: FontWeight.w400,
       color: Colors.grey.shade700,
       maxLines: 1,
     );
@@ -49,9 +47,7 @@ class CustomTextdisplay extends StatelessWidget {
         fontSize: fontSize,
         fontWeight: fontWeight,
         color: color,
-        // YouTube menggunakan font standar sistem (Roboto di Android).
-        // letterSpacing kecil membuat teks terlihat lebih rapat dan rapi.
-        letterSpacing: 0.1, 
+        letterSpacing: 0.1,
       ),
     );
   }

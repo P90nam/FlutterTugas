@@ -32,7 +32,7 @@ class ConfirmRegistrationPage extends StatelessWidget {
                   _YouTubeMark(),
                   SizedBox(width: 10),
                   Text(
-                    'YouTube',
+                    'YouTube Style Confirm',
                     style: TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold),
                   ),
                 ],
