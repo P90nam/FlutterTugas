@@ -46,12 +46,16 @@ class RegistrationPage extends StatelessWidget {
               ),
               const SizedBox(height: 22),
               ...fields.map((field) => Padding(
-                    padding: const EdgeInsets.only(bottom: 14),
-                    child: field,
+                    padding: const EdgeInsets.only(bottom: 10),
+                    child: SizedBox(
+                      height: 52,
+                      child: field,
+                    ),
                   )),
-              const SizedBox(height: 10),
+              const SizedBox(height: 8),
               SizedBox(
                 width: double.infinity,
+                height: 46,
                 child: CustomButton(
                   label: 'Submit',
                   onPressed: controller.sendData,

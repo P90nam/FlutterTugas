@@ -45,26 +45,27 @@ class ConfirmRegistrationPage extends StatelessWidget {
               const SizedBox(height: 22),
               Container(
                 width: double.infinity,
-                padding: const EdgeInsets.all(18),
+                padding: const EdgeInsets.all(14),
                 decoration: BoxDecoration(
                   color: const Color(0xFF1E1E1E),
-                  borderRadius: BorderRadius.circular(14),
+                  borderRadius: BorderRadius.circular(12),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: data.map((item) => Padding(
-                        padding: const EdgeInsets.only(bottom: 12),
+                        padding: const EdgeInsets.only(bottom: 8),
                         child: CustomTextdisplay(
                           text: '${item.$1}: ${item.$2}',
                           color: Colors.white,
-                          fontSize: 16,
+                          fontSize: 14,
                         ),
                       )).toList(),
                 ),
               ),
-              const SizedBox(height: 24),
+              const SizedBox(height: 18),
               SizedBox(
                 width: double.infinity,
+                height: 46,
                 child: CustomButton(
                   label: 'Back',
                   onPressed: Get.back,
